@@ -16,7 +16,7 @@ function createDefaultScoreboard() {
 
 createDefaultScoreboard();
 
-socket.on("connection", (data) => {
+socket.on("connection:Vodafone Booth", (data) => {
     let scores = JSON.parse(data);
     console.log("Initial scores:", scores);
 
@@ -42,7 +42,7 @@ socket.on("connection", (data) => {
     }
 });
 
-socket.on("scoreUpdate", (data) => {
+socket.on("scoreUpdate:Vodafone Booth", (data) => {
     console.log("Score update received:");
     
     let scores = JSON.parse(data);
